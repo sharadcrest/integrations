@@ -1,0 +1,80 @@
+{
+    "expected": [
+        {
+            "@timestamp": "2021-04-29T21:46:42.705Z",
+            "data_stream": {
+                "dataset": "VAR_CL_DS_PREFIX_PROTOCOL_LOG.VAR_CL_DS_SUFFIX_PROTOCOL_LOG_VARIOUS",
+                "namespace": "VAR_CL_DS_NAMESPACE_PROTOCOL_LOG",
+                "type": "VAR_CL_DS_TYPE_PROTOCOL_LOG"
+            },
+            "destination": {
+                "address": "198.51.100.133",
+                "ip": "198.51.100.133",
+                "port": 33890
+            },
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "event": {
+                "category": "network",
+                "created": "2021-04-29T21:51:42.917Z",
+                "dataset": "rdp",
+                "id": "CiLxHu3iy4YCAA2Q1l",
+                "ingested": "2025-08-19T12:22:53.397745Z",
+                "kind": "event",
+                "module": "corelight",
+                "outcome": "success",
+                "type": [
+                    "connection",
+                    "info",
+                    "protocol"
+                ]
+            },
+            "labels": {
+                "corelight": {
+                    "ecs_method": "ingest_pipeline",
+                    "ecs_method_version": "2023120101",
+                    "ecs_version": "8.11.0.1",
+                    "event_category": "network_protocols",
+                    "event_sub_type": "rdp"
+                }
+            },
+            "log": {
+                "id": {
+                    "uid": "CiLxHu3iy4YCAA2Q1l"
+                }
+            },
+            "message": "{ \"_path\": \"rdp\", \"_system_name\": \"sensor_10_10_101_42\", \"_write_ts\": \"2021-04-29T21:51:42.917175Z\", \"ts\": \"2021-04-29T21:46:42.705439Z\", \"uid\": \"CiLxHu3iy4YCAA2Q1l\", \"id.orig_h\": \"203.0.113.118\", \"id.orig_p\": 50292, \"id.resp_h\": \"198.51.100.133\", \"id.resp_p\": 33890, \"cookie\": \"bob\", \"result\": \"encrypted\", \"security_protocol\": \"HY\", \"cert_count\": 0, \"auth_success\": true, \"channels_joined\": 7, \"inferences\": [ \"APWA\", \"APW\", \"PWA\", \"MMM\" ] }",
+            "observer": {
+                "hostname": "sensor_10_10_101_42",
+                "type": "sensor",
+                "vendor": "Corelight"
+            },
+            "pipeline_prefix": "logs-corelight.log-1.0.1-",
+            "rdp": {
+                "auth_successful": true,
+                "certificate": {
+                    "count": 0
+                },
+                "channels_joined": 7,
+                "cookie": "bob",
+                "inferences": [
+                    "APWA",
+                    "APW",
+                    "PWA",
+                    "MMM"
+                ],
+                "result": "encrypted",
+                "selected_protocol": "HY"
+            },
+            "source": {
+                "address": "203.0.113.118",
+                "ip": "203.0.113.118",
+                "port": 50292
+            },
+            "tags": [
+                "preserve_duplicate_custom_fields"
+            ]
+        }
+    ]
+}

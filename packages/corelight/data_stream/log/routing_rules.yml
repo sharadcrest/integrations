@@ -1,0 +1,7 @@
+- source_dataset: corelight.log
+  rules:
+    - target_dataset: corelight.rdp
+      if: ctx.event?.dataset == 'rdp'
+      namespace:
+        - "{{data_stream.namespace}}"
+        - default

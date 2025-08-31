@@ -1,0 +1,20 @@
+- name: rdp
+  type: group
+  fields:
+    - name: auth_successful
+      type: boolean
+    - name: certificate
+      type: group
+      fields:
+        - name: count
+          type: long
+    - name: channels_joined
+      type: long
+    - name: cookie
+      type: keyword
+    - name: inferences
+      type: keyword
+    - name: result
+      type: keyword
+    - name: selected_protocol
+      type: keyword

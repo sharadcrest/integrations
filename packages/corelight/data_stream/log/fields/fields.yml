@@ -1,0 +1,63 @@
+- name: corelight
+  type: group
+  fields:
+    - name: ip
+      type: ip
+    - name: sample_field
+      type: keyword
+- name: temporary_metadata_index_name_dataset_suffix
+  type: keyword
+- name: temporary_metadata_index_name_namespace
+  type: keyword
+- name: temporary_metadata_index_name_dataset_prefix
+  type: keyword
+- name: temporary_metadata_index_name_type
+  type: keyword
+- name: temporary_metadata_is_protocol_log
+  type: keyword
+- name: pipeline
+  type: keyword
+- name: common-path
+  type: keyword
+- name: labels
+  type: group
+  fields:
+    - name: corelight
+      type: group
+      fields:
+        - name: ecs_method
+          type: keyword
+        - name: ecs_method_version
+          type: keyword
+        - name: event_category
+          type: keyword
+        - name: event_sub_type
+          type: keyword
+        - name: ecs_version
+          type: keyword
+- name: log.id.uid
+  type: keyword
+- name: pipeline_prefix
+  type: keyword
+
+# once routing_rules works then no need to add here
+- name: rdp
+  type: group
+  fields:
+    - name: auth_successful
+      type: boolean
+    - name: certificate
+      type: group
+      fields:
+        - name: count
+          type: long
+    - name: channels_joined
+      type: long
+    - name: cookie
+      type: keyword
+    - name: inferences
+      type: keyword
+    - name: result
+      type: keyword
+    - name: selected_protocol
+      type: keyword
